@@ -5,7 +5,7 @@
 ## 🚀 Демо
 
 После публикации на GitHub Pages сайт доступен по адресу:
-`https://ВАШ_ЛОГИН.github.io/csharp-test/`
+`https://sfl-11.github.io/test-lebedeva/`
 
 ## ✨ Возможности
 
