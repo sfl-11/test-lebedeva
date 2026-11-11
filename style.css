@@ -1,0 +1,176 @@
+/* ===== БАЗА ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', system-ui, -apple-system, sans-serif;
+  color: #4a4458;
+  min-height: 100vh;
+  margin: 0;
+  /* Нежный пастельный градиент */
+  background: linear-gradient(135deg,
+              #e8e0f5 0%,
+              #dceef5 35%,
+              #d9f0e6 70%,
+              #fce9e4 100%);
+  background-attachment: fixed;
+}
+
+/* ===== ЗАГОЛОВОК ===== */
+.main-title {
+  font-weight: 800;
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  letter-spacing: -0.5px;
+  background: linear-gradient(90deg, #a48ad4, #6cb8c9, #f1a7a0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #8a819e;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+/* ===== КАРТОЧКА ===== */
+.pastel-card {
+  border: none;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 12px 40px rgba(164, 138, 212, 0.18),
+              0 2px 8px rgba(108, 184, 201, 0.1);
+}
+
+/* ===== ПРОГРЕСС ===== */
+.pastel-progress {
+  height: 10px;
+  border-radius: 10px;
+  background: rgba(164, 138, 212, 0.15);
+  overflow: hidden;
+}
+
+.pastel-progress .progress-bar {
+  background: linear-gradient(90deg, #b8a4dd, #7fc8d4, #f6b8b0);
+  border-radius: 10px;
+  transition: width 0.4s ease;
+}
+
+/* ===== БЕЙДЖ ТЕМЫ ===== */
+.pastel-badge {
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #7a6b95;
+  background: #ede6f9;
+}
+
+/* ===== ВОПРОС ===== */
+#questionText {
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.45;
+  color: #3f3a4d;
+}
+
+/* ===== КНОПКИ ОТВЕТОВ ===== */
+#answersBlock .btn {
+  text-align: left;
+  padding: 0.9rem 1.2rem;
+  border-radius: 16px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 2px solid #e6ddf2;
+  background: #faf7fd;
+  color: #5a4f6e;
+  transition: all 0.2s ease;
+}
+
+#answersBlock .btn:hover:not(:disabled) {
+  background: #f0eaf9;
+  border-color: #c8b3e8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(164, 138, 212, 0.2);
+}
+
+#answersBlock .btn:disabled {
+  opacity: 1;
+  cursor: not-allowed;
+}
+
+/* Правильный ответ — нежно-зелёный 🌿 */
+#answersBlock .btn.correct {
+  background: #c8ebd4 !important;
+  border-color: #7fcaa0 !important;
+  color: #2f6b4a !important;
+}
+
+/* Неправильный — нежно-розовый 🌸 */
+#answersBlock .btn.wrong {
+  background: #fbe0e0 !important;
+  border-color: #f0a8a8 !important;
+  color: #9b3b3b !important;
+}
+
+/* ===== ФИДБЕК ===== */
+#feedback {
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+#feedback.text-success { color: #3d9b6b !important; }
+#feedback.text-danger  { color: #d96c6c !important; }
+
+/* ===== РЕЗУЛЬТАТ ===== */
+.result-emoji {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+  animation: pop 0.5s ease;
+}
+
+@keyframes pop {
+  0%   { transform: scale(0.5); opacity: 0; }
+  70%  { transform: scale(1.15); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* ===== ГЛАВНАЯ КНОПКА ===== */
+.pastel-btn-primary {
+  padding: 0.75rem 2rem;
+  border-radius: 999px;
+  border: none;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #fff;
+  background: linear-gradient(90deg, #b8a4dd, #7fc8d4);
+  box-shadow: 0 6px 18px rgba(127, 200, 212, 0.4);
+  transition: all 0.2s ease;
+}
+
+.pastel-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(127, 200, 212, 0.5);
+  color: #fff;
+}
+
+/* ===== ПОДПИСЬ ===== */
+.signature {
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 1.5px;
+  color: #a89cc4;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/* ===== МОБИЛЬНАЯ ВЕРСИЯ ===== */
+@media (max-width: 576px) {
+  #questionText { font-size: 1.1rem; }
+  #answersBlock .btn { font-size: 0.95rem; padding: 0.8rem 1rem; }
+}
